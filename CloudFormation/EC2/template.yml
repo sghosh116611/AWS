@@ -1,0 +1,12 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: My EC2 instance template file
+Resources:
+  MySGCustom:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: "Custom Security Group for my EC2"
+      SecurityGroupIngress:
+        - CidrIp: 0.0.0.0/0
+          FromPort: 22
+          IpProtocol: tcp
+          ToPort: 22
